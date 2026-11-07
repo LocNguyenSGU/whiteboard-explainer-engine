@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:16,156
+Mỗi bài trong Terminal-Bench có ba thứ: đề bài, một bộ test, và một lời giải mẫu. AI được thả vào terminal của một máy ảo Docker. Nó chỉ thấy đề bài và hai file. Bộ test bị giấu. Chỉ khi AI báo xong, máy chấm mới chép bộ test vào và chạy.
+
+2
+00:00:17,156 --> 00:00:29,164
+Bộ test của bài này có đúng ba câu kiểm. Có file avg temp không. File có chỉ chứa một con số không. Và con số đó có bằng mười một phẩy bốn hai chín, làm tròn ba chữ số, không. Sai một câu là rớt cả bài.
+
+3
+00:00:30,164 --> 00:00:38,162
+Alex chạy lời giải mẫu trước, để chắc bài này giải được. Đậu. Rồi tới lượt một model rẻ, GPT bốn o mini, chạy ba lần.
+
+4
+00:00:39,162 --> 00:00:50,191
+Đây là màn hình thật lúc nó làm bài. Nó in hai file ra xem, rồi ghép dòng thứ nhất với dòng thứ nhất, dòng thứ hai với dòng thứ hai. Nó không để ý ngày tháng bị xáo. Nó ghi kết quả, rồi báo xong.
+
+5
+00:00:51,191 --> 00:01:06,494
+Đến lượt máy chấm. Câu kiểm thứ nhất qua. Câu thứ hai qua. Câu thứ ba hỏng: đáp án mười một phẩy bốn hai chín, nó ghi mười tám phẩy hai tám sáu. Ba lần chạy, không lần nào đậu. Lần thứ ba nó còn loay hoay, đọc gần hai triệu token mà vẫn sai.
+
+6
+00:01:07,494 --> 00:01:19,671
+Giờ tới một model mạnh hơn, GPT năm phẩy sáu Luna, cũng ba lần. Lần nào nó cũng viết một đoạn Python đọc được cả ba kiểu ngày tháng, ghép hai file theo đúng ngày, rồi mới tính. Ba trên ba lần đậu.
+

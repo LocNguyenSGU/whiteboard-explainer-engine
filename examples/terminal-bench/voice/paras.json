@@ -1,0 +1,44 @@
+[
+ {
+  "id": "p06",
+  "start": 0.0,
+  "end": 16.156,
+  "text": "Mỗi bài trong Terminal-Bench có ba thứ: đề bài, một bộ test, và một lời giải mẫu. AI được thả vào terminal của một máy ảo Docker. Nó chỉ thấy đề bài và hai file. Bộ test bị giấu. Chỉ khi AI báo xong, máy chấm mới chép bộ test vào và chạy.",
+  "giong": "giai-thich"
+ },
+ {
+  "id": "p07",
+  "start": 17.156,
+  "end": 29.164,
+  "text": "Bộ test của bài này có đúng ba câu kiểm. Có file avg temp không. File có chỉ chứa một con số không. Và con số đó có bằng mười một phẩy bốn hai chín, làm tròn ba chữ số, không. Sai một câu là rớt cả bài.",
+  "giong": "giai-thich"
+ },
+ {
+  "id": "p08",
+  "start": 30.164,
+  "end": 38.162,
+  "text": "Alex chạy lời giải mẫu trước, để chắc bài này giải được. Đậu. Rồi tới lượt một model rẻ, GPT bốn o mini, chạy ba lần.",
+  "giong": "giai-thich"
+ },
+ {
+  "id": "p09",
+  "start": 39.162,
+  "end": 50.191,
+  "text": "Đây là màn hình thật lúc nó làm bài. Nó in hai file ra xem, rồi ghép dòng thứ nhất với dòng thứ nhất, dòng thứ hai với dòng thứ hai. Nó không để ý ngày tháng bị xáo. Nó ghi kết quả, rồi báo xong.",
+  "giong": "giai-thich"
+ },
+ {
+  "id": "p10",
+  "start": 51.191,
+  "end": 66.494,
+  "text": "Đến lượt máy chấm. Câu kiểm thứ nhất qua. Câu thứ hai qua. Câu thứ ba hỏng: đáp án mười một phẩy bốn hai chín, nó ghi mười tám phẩy hai tám sáu. Ba lần chạy, không lần nào đậu. Lần thứ ba nó còn loay hoay, đọc gần hai triệu token mà vẫn sai.",
+  "giong": "giai-thich"
+ },
+ {
+  "id": "p11",
+  "start": 67.494,
+  "end": 79.671,
+  "text": "Giờ tới một model mạnh hơn, GPT năm phẩy sáu Luna, cũng ba lần. Lần nào nó cũng viết một đoạn Python đọc được cả ba kiểu ngày tháng, ghép hai file theo đúng ngày, rồi mới tính. Ba trên ba lần đậu.",
+  "giong": "giai-thich"
+ }
+]

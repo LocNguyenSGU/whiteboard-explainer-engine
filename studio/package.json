@@ -1,0 +1,26 @@
+{
+  "name": "youtube-factory-studio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Remotion video engine: JSON timeline + PNG assets + voice WAV -> MP4 (styles A/B/C)",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "node scripts/render.mjs",
+    "still": "node scripts/still.mjs",
+    "typecheck": "tsc --noEmit",
+    "demo:assets": "node scripts/make-demo-assets.mjs"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "5.3.0",
+    "@fontsource/mali": "5.3.0",
+    "@remotion/cli": "4.0.534",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "remotion": "4.0.534",
+    "roughjs": "4.6.6"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.7",
+    "typescript": "5.9.3"
+  }
+}

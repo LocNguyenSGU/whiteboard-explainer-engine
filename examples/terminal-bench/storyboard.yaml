@@ -1,0 +1,62 @@
+# Demo storyboard: 80 seconds from the episode "Bài thi cho AI chấm thế nào?" (https://youtu.be/OWCMEja1pzo).
+# Each scene is a few lines of YAML; anchors ("@ phrase") are words the narrator says, so every element appears
+# exactly when its phrase is spoken. `video:` plays a real terminal recording inside the frame.
+video: demo-terminal-bench
+mode: medium
+realism: low
+hud: {muc_luc: true}
+am_thanh: true
+nguon:
+  TB: "Terminal-Bench (open source), task heterogeneous-dates · run locally 07/11/2026"
+scenes:
+  - id: s06
+    para: p06
+    chuong: "Giao việc, máy chấm"
+    anh: {src: sketch-may-ao-thi.png, o: trai, khung: false, w: 760}
+    code: {tieu_de: "heterogeneous-dates/ (file thật) @ Mỗi bài trong Terminal-Bench có ba thứ", o: phai, dong: ["task.yaml   ← đề bài @ đề bài #cam", "tests/      ← bộ test (giấu) @ một bộ test #do", "solution.sh ← lời giải mẫu @ một lời giải mẫu #xanh"]}
+  - id: s06b
+    at: "AI được thả vào terminal"
+    anh: {src: sketch-may-ao-thi.png, o: trai, khung: false, w: 760}
+    nhan: {o: phai, items: ["AI vào terminal máy ảo Docker @ AI được thả vào terminal", "chỉ thấy đề + 2 file @ Nó chỉ thấy đề bài", "bộ test bị giấu @ Bộ test bị giấu #do", "báo xong → mới chép test vào @ Chỉ khi AI báo xong #cam", "…và chạy @ chép bộ test vào và chạy"]}
+  - id: s07
+    para: p07
+    code: {tieu_de: "tests/test_outputs.py (file thật) @ Bộ test của bài này", o: giua, dong: ["def test_avg_temp_file_exists() @ Có file avg temp không", "def test_avg_temp_file_format() @ File có chỉ chứa một con số không", "GROUND_TRUTH ＝ 11.428571428571429 @ mười một phẩy bốn hai chín #cam", "assert round(...,3) == round(answer,3) @ làm tròn ba chữ số"]}
+    hop_ket_luan: {text: "sai một câu = rớt cả bài", at: "Sai một câu là rớt cả bài", color: do}
+    nguon: "TB, tests/test_outputs.py @ Bộ test của bài này"
+    bo_kiem_so: ["11.428571428571429", "11,429", "3"]
+  - id: s08
+    para: p08
+    con_so: {y: 440, items: [{to: 1, suffix: "/1", label: "lời giải mẫu: đậu", at: "Đậu", color: xanh-la}]}
+    nhan: {o: tren, items: ["chạy lời giải mẫu trước @ Alex chạy lời giải mẫu trước", "tới lượt GPT-4o mini (model rẻ) @ Rồi tới lượt một model rẻ #cam"]}
+    chu: "chạy 3 lần @ chạy ba lần #cam"
+    nguon: "TB @ Alex chạy lời giải mẫu trước"
+    bo_kiem_so: ["1", "4", "3"]
+  - id: s09
+    para: p09
+    chuong: "Chạy thật"
+    anh: {src: clip-mini-agent.png, video: clip-mini-agent.mp4, o: trai, x: 600, y: 520, w: 1080, khung: true}
+    nhan: {o: phai, items: ["màn hình thật · GPT-4o mini @ Đây là màn hình thật #cam", "in hai file ra xem @ Nó in hai file ra xem", "ghép dòng 1 với dòng 1… @ rồi ghép dòng thứ nhất", "không để ý ngày bị xáo @ Nó không để ý ngày tháng bị xáo #do", "ghi kết quả, báo xong @ Nó ghi kết quả"]}
+    nguon: "TB, ghi màn hình agent (lần 1) @ Đây là màn hình thật"
+  - id: s10
+    para: p10
+    anh: {src: clip-mini-tests.png, video: clip-mini-tests.mp4, o: trai, x: 600, y: 520, w: 1080, khung: true}
+    nhan: {o: tren-phai, items: ["máy chấm chạy test @ Đến lượt máy chấm", "✓ có file @ Câu kiểm thứ nhất qua #xanh-la", "✓ chỉ một con số @ Câu thứ hai qua #xanh-la", "✗ câu thứ ba hỏng @ Câu thứ ba hỏng #do", "đáp án: 11,429 @ đáp án mười một phẩy bốn hai chín", "nó ghi: 18,286 @ nó ghi mười tám phẩy hai tám sáu #do"]}
+    nguon: "TB, máy chấm (lần 1) @ Đến lượt máy chấm"
+    bo_kiem_so: ["11,429", "18,286"]
+  - id: s10b
+    at: "Ba lần chạy, không lần nào đậu"
+    con_so: {y: 420, items: [{to: 0, suffix: "/3", label: "GPT-4o mini đậu", at: "không lần nào đậu", color: do}, {to: 2, suffix: " triệu", label: "token lần 3 (vẫn sai)", at: "gần hai triệu token", color: xam}]}
+    nguon: "TB, runs/mini-dates @ Ba lần chạy"
+    bo_kiem_so: ["0", "3", "2"]
+  - id: s11
+    para: p11
+    anh: {src: clip-luna-agent.png, video: clip-luna-agent.mp4, o: trai, x: 600, y: 520, w: 1080, khung: true}
+    nhan: {o: phai, items: ["GPT-5.6 Luna @ GPT năm phẩy sáu Luna #cam", "cũng 3 lần @ cũng ba lần", "viết một đoạn Python @ viết một đoạn Python", "đọc được cả 3 kiểu ngày @ đọc được cả ba kiểu ngày tháng", "ghép theo đúng ngày @ ghép hai file theo đúng ngày #xanh-la"]}
+    nguon: "TB, ghi màn hình agent Luna (lần 1) @ Giờ tới một model mạnh hơn"
+    bo_kiem_so: ["5.6", "3"]
+  - id: s11b
+    at: "Ba trên ba lần đậu"
+    anh: {src: clip-luna-tests.png, video: clip-luna-tests.mp4, o: trai, x: 600, y: 520, w: 1080, khung: true}
+    nhan: {o: phai, items: ["3 / 3 lần đậu @ Ba trên ba lần đậu #xanh-la", "máy chấm: 3 passed @ +1.0"]}
+    nguon: "TB, runs/luna-dates @ Ba trên ba lần đậu"
+    bo_kiem_so: ["3", "5.6"]

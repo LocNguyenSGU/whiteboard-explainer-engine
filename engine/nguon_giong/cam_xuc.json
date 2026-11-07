@@ -1,0 +1,41 @@
+{
+ "_ghi_chu": "Bảng đổi nhãn cảm xúc giữa các nguồn giọng (quyết định 0014). Lộc sửa được. bi_danh: nhãn viết trong kịch bản → mã chung. the_hien: mỗi nguồn thể hiện mã chung thế nào. Thứ tự ưu tiên: nhan (muc: tuong-duong | gan-nghia) → dau_cau → than_tu (chỉ khi --them-than-tu) → bỏ + cảnh báo.",
+ "bi_danh": {
+  "curious": "to-mo", "intrigued": "to-mo", "tò mò": "to-mo",
+  "surprised": "ngac-nhien", "excited": "ngac-nhien", "amazed": "ngac-nhien", "ngạc nhiên": "ngac-nhien",
+  "worried": "lo-lang", "sad": "lo-lang", "disappointed": "lo-lang", "lo lắng": "lo-lang",
+  "skeptical": "hoai-nghi", "hoài nghi": "hoai-nghi",
+  "thoughtful": "suy-nghi", "suy nghĩ": "suy-nghi",
+  "serious": "nghiem-tuc", "nghiêm túc": "nghiem-tuc",
+  "laughs": "cuoi", "laugh": "cuoi", "chuckles": "cuoi", "chuckle": "cuoi", "giggles": "cuoi", "cười": "cuoi", "cuoi": "cuoi",
+  "sighs": "tho-dai", "sigh": "tho-dai", "exhales": "tho-dai", "thở dài": "tho-dai", "tho dai": "tho-dai",
+  "clears throat": "hang-giong", "clear throat": "hang-giong", "hắng giọng": "hang-giong", "hang giong": "hang-giong"
+ },
+ "nguon": {
+  "elevenlabs-v3": {
+   "_ghi_chu": "eleven_v3 đọc được nhãn tiếng Anh tự do: nhãn tiếng Anh trong kịch bản giữ nguyên, nhãn tiếng Việt đổi sang tiếng Anh.",
+   "giu_nhan_tieng_anh": true,
+   "the_hien": {
+    "cuoi": {"nhan": "[laughs]"}, "tho-dai": {"nhan": "[sighs]"}, "hang-giong": {"nhan": "[clears throat]"},
+    "to-mo": {"nhan": "[curious]"}, "ngac-nhien": {"nhan": "[surprised]"}, "lo-lang": {"nhan": "[worried]"},
+    "hoai-nghi": {"nhan": "[skeptical]"}, "suy-nghi": {"nhan": "[thoughtful]"}, "nghiem-tuc": {"nhan": "[serious]"}
+   }
+  },
+  "khong-nhan": {
+   "_ghi_chu": "Model không đọc nhãn (eleven_flash_v2_5, eleven_multilingual_v2…): chỉ còn dấu câu / thán từ.",
+   "the_hien": {
+    "to-mo": {"dau_cau": "?"}, "ngac-nhien": {"dau_cau": "!", "than_tu": "Ồ,"}, "hoai-nghi": {"than_tu": "Hừm,"},
+    "suy-nghi": {"dau_cau": "…"}
+   }
+  },
+  "vieneu-v4": {
+   "_ghi_chu": "VieNeu engine v4 chỉ đọc 3 nhãn: [cười] [thở dài] [hắng giọng] (GET /v1/emotion-tags?engine=v4, 10/10/2026).",
+   "the_hien": {
+    "cuoi": {"nhan": "[cười]"}, "tho-dai": {"nhan": "[thở dài]"}, "hang-giong": {"nhan": "[hắng giọng]"},
+    "lo-lang": {"nhan": "[thở dài]", "muc": "gan-nghia"},
+    "to-mo": {"dau_cau": "?"}, "ngac-nhien": {"dau_cau": "!", "than_tu": "Ồ,"}, "hoai-nghi": {"than_tu": "Hừm,"},
+    "suy-nghi": {"dau_cau": "…"}
+   }
+  }
+ }
+}
